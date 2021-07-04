@@ -1,0 +1,72 @@
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.6em);
+    /* font-size: .875rem; */
+}
+
+@media (min-width: 50em) {
+    :root {
+        font-size: 1.125em;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    margin: 4em auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2em;
+
+}
+
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fill {
+    background-image: url('http://source.unsplash.com/random/190×190');
+    height: 190px;
+    width: 190px;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.hold {
+    border: solid antiquewhite .125em;
+}
+
+.hovered{
+    background: #f4f4f4;
+    border-style: dashed;
+}
+
+.invisible {
+    display: none;
+}
